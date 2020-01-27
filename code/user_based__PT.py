@@ -471,7 +471,7 @@ class dataset:
             gp1=df_adjacency_day.groupby(['route_id','trip_head2'])
 
             for k,group in gp1:
-                gruppo=group.sort('n_sequence')
+                gruppo=group.sort_values('n_sequence')
                 Sources=list(gruppo.Source)
                 Targets=list(gruppo.Target)
                 Times=list(gruppo['time_from_start'])
